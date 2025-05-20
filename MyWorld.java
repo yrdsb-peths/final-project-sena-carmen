@@ -12,7 +12,7 @@ public class MyWorld extends World {
     
     public void createBall() {
     Ball ball = new Ball();
-    int x = Greenfoot.getRandomNumber(600); 
+    int x = 100; 
     int y = 0;
     addObject(ball, x, y);
     }
