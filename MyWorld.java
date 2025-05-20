@@ -7,4 +7,10 @@ public class MyWorld extends World {
         Coin coin = new Coin();
         addObject(coin, 100, 200);
     }
+    
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300, 200);
+    }
 }
