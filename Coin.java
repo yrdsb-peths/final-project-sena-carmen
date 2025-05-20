@@ -12,19 +12,24 @@ public class Coin extends Actor
      * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int speed = 10; 
     public void act()
-    {
-        // Add your action code here.
+    { 
+        //Let the coin fall.
         int x = getX();
-        int y = getY();
+        int y = getY() + speed;
         setLocation(x, y);
         
+        //Remove coin and draw the game Over when coin gets to bottom
         MyWorld world = (MyWorld)getWorld();
         if(getY() >= world.getHeight())
         {
-            world.gameOver();
-            world.removeObject(this);
+            world.removeObject(this); 
         }
-        
+    }
+    
+    public void setSpeed (int spd)
+    {
+        speed = spd; 
     }
 }

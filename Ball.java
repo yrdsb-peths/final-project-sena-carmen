@@ -12,7 +12,7 @@ public class Ball extends Actor
      * Act - do whatever the Ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int speed = 1; 
+    int speed = 5; 
     public void act()
     {
         GreenfootImage image = new GreenfootImage("ball.png");
