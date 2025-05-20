@@ -6,6 +6,15 @@ public class MyWorld extends World {
         
         Coin coin = new Coin();
         addObject(coin, 100, 200);
+        
+        createBall(); 
+    }
+    
+    public void createBall() {
+    Ball ball = new Ball();
+    int x = Greenfoot.getRandomNumber(600); 
+    int y = 0;
+    addObject(ball, x, y);
     }
     
     public void gameOver()
@@ -14,3 +23,5 @@ public class MyWorld extends World {
         addObject(gameOverLabel, 300, 200);
     }
 }
+
+
