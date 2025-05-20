@@ -4,10 +4,8 @@ public class MyWorld extends World {
     public MyWorld() {
         super(600, 400, 1);
         
-        Coin coin = new Coin();
-        addObject(coin, 100, 200);
-        
         createBall(); 
+        createCoin();
     }
     
     public void createBall() {
@@ -15,6 +13,13 @@ public class MyWorld extends World {
     int x = 100; 
     int y = 0;
     addObject(ball, x, y);
+    }
+    
+    public void createCoin() {
+    Coin coin = new Coin();
+    int x = Greenfoot.getRandomNumber(600); 
+    int y = 0;
+    addObject(coin, x, y);
     }
     
     public void gameOver()
