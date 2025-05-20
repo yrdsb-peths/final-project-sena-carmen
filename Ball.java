@@ -15,12 +15,12 @@ public class Ball extends Actor
     int speed = 1; 
     public void act()
     {
-        GreenfootImage image = new GreenfootImage("Ball2.png");
+        GreenfootImage image = new GreenfootImage("ball.png");
         image.scale(50, 50);
         setImage(image); 
         //Let the Ball fall.
-        int x = 100;
-        int y = 100 + speed;
+        int x = getX();
+        int y = getY() + speed;
         setLocation(x, y);
         
         //Remove Ball and draw the game Over when Ball gets to bottom
