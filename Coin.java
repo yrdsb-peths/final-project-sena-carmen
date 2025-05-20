@@ -19,7 +19,7 @@ public class Coin extends Actor
         // Add your action code here.
         int x = getX();
         int y = getY();
-        setLocation(x, y);
+        setLocation(x, y + speed);
         
         MyWorld world = (MyWorld)getWorld();
         if(getY() >= world.getHeight())
