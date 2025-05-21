@@ -27,6 +27,11 @@ public class Coin extends Actor
             world.gameOver();
             world.removeObject(this);
         }
+        
+        if(Greenfoot.mouseClicked(this))
+        {
+            getWorld().removeObject(this);
+        }
     }
     
     public void setSpeed(int spd)
