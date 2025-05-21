@@ -31,6 +31,8 @@ public class Coin extends Actor
         if(Greenfoot.mouseClicked(this))
         {
             getWorld().removeObject(this);
+            world.createCoin();
+            world.increaseScore();
         }
     }
     
