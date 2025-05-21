@@ -25,6 +25,7 @@ public class MyWorld extends World {
     
     public void createCoin() {
         Coin coin = new Coin();
+        coin.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600); 
         int y = 0;
         addObject(coin, x, y);
