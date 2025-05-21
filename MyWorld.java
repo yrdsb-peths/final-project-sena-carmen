@@ -13,6 +13,7 @@ public class MyWorld extends World {
     
     public void createBall() {
     Ball ball = new Ball();
+    Ball.setSpeed(level); 
     int x = 100; 
     int y = 0;
     addObject(ball, x, y);
