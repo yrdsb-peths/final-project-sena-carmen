@@ -12,19 +12,18 @@ public class MyWorld extends World {
     }
     
     public void createBall() {
-    Ball ball = new Ball();
-    Ball.setSpeed(level); 
-    int x = 100; 
-    int y = 0;
-    addObject(ball, x, y);
+        Ball ball = new Ball();
+        int x = 100; 
+        int y = 0;
+        addObject(ball, x, y);
     
     }
     
     public void createCoin() {
-    Coin coin = new Coin();
-    int x = Greenfoot.getRandomNumber(600); 
-    int y = 0;
-    addObject(coin, x, y);
+        Coin coin = new Coin();
+        int x = Greenfoot.getRandomNumber(600); 
+        int y = 0;
+        addObject(coin, x, y);
     }
     
     public void gameOver()
