@@ -27,7 +27,9 @@ public class Ball extends Actor
         MyWorld world = (MyWorld)getWorld();
         if(getY() >= world.getHeight())
         {
-            world.removeObject(this);
+            world.gameOver();
+            world.removeObjects(world.getObjects(Ball.class));
+            world.removeObjects(world.getObjects(Coin.class));
         }
         
         if(Greenfoot.mouseClicked(this))

@@ -16,7 +16,8 @@ public class MyWorld extends World {
     
     public void createBall() {
         Ball ball = new Ball();
-        int x = 100; 
+        ball.setSpeed(level);
+        int x = Greenfoot.getRandomNumber(600); 
         int y = 0;
         addObject(ball, x, y);
     

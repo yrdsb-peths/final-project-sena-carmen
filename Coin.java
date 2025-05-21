@@ -25,7 +25,8 @@ public class Coin extends Actor
         if(getY() >= world.getHeight())
         {
             world.gameOver();
-            world.removeObject(this);
+            world.removeObjects(world.getObjects(Ball.class));
+            world.removeObjects(world.getObjects(Coin.class));
         }
         
         if(Greenfoot.mouseClicked(this))
