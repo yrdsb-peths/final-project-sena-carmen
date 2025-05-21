@@ -12,7 +12,7 @@ public class Ball extends Actor
      * Act - do whatever the Ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int speed = 5; 
+    int speed = 2; 
     public void act()
     {
         GreenfootImage image = new GreenfootImage("ball.png");
@@ -27,7 +27,9 @@ public class Ball extends Actor
         MyWorld world = (MyWorld)getWorld();
         if(getY() >= world.getHeight())
         {
-            world.removeObject(this); 
+            world.removeObject(this);
+            world.createBall();
+            world.increaseScore();
         }
     }
     
@@ -35,4 +37,5 @@ public class Ball extends Actor
     {
         speed = spd; 
     }
+    
 }
