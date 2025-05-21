@@ -12,6 +12,8 @@ public class MyWorld extends World {
         
         createBall(); 
         createCoin();
+        
+        setBackground(new GreenfootImage("background.png"));
     }
     
     public void createBall() {
