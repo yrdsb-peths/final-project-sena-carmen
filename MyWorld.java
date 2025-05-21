@@ -5,7 +5,10 @@ public class MyWorld extends World {
     Label scoreLabel; 
     int level = 1; 
     public MyWorld() {
-        super(600, 400, 1);
+        super(600, 400, 1, false);
+        
+        scoreLabel = new Label(0, 80);
+        addObject(scoreLabel, 50, 50);
         
         createBall(); 
         createCoin();
