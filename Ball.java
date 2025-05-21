@@ -28,6 +28,11 @@ public class Ball extends Actor
         if(getY() >= world.getHeight())
         {
             world.removeObject(this);
+        }
+        
+        if(Greenfoot.mouseClicked(this))
+        {
+            getWorld().removeObject(this);
             world.createBall();
             world.increaseScore();
         }
