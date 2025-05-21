@@ -18,7 +18,6 @@ public class MyWorld extends World {
     int y = 0;
     addObject(ball, x, y);
     
-    
     }
     
     public void createCoin() {
