@@ -35,16 +35,15 @@ public class Coin extends Actor
         MyWorld world = (MyWorld)getWorld();
         if(getY() >= world.getHeight())
         {
-            world.gameOver();
-            world.removeObjects(world.getObjects(Ball.class));
             world.removeObjects(world.getObjects(Coin.class));
+            world.decreaseScore(); 
         }
         
         if(Greenfoot.mouseClicked(this))
         {
             getWorld().removeObject(this);
             world.createCoin();
-            world.increaseScore();
+            world.increaseScoreCoin();
         }
     }
     

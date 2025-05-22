@@ -61,6 +61,24 @@ public class MyWorld extends World {
             level += 1; 
         }
     }
+    
+    public void increaseScoreCoin()
+    {
+        score+=2;
+        scoreLabel.setValue(score);
+        
+        if (score % 15 == 0)
+        {
+            level += 1; 
+        }
+    }
+    
+    public void decreaseScore()
+    {
+        score-=2;
+        scoreLabel.setValue(score);
+        createCoin();
+    }
 }
 
 
