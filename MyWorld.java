@@ -21,7 +21,7 @@ public class MyWorld extends World {
         ball.setSpeed(level);
         
         //Define four possible X positions
-        int[] spawnPositions = {75, 225, 375, 525};
+        int[] spawnPositions = {185, 255, 335, 395};;
         
         int x = spawnPositions[Greenfoot.getRandomNumber(4)]; 
         int y = 0;
@@ -31,7 +31,12 @@ public class MyWorld extends World {
     
     public void createCoin() {
         Coin coin = new Coin();
+<<<<<<< HEAD
+        int[] spawnPositions = {185, 255, 335, 395};
+=======
+        coin.setSpeed(level);
         int[] spawnPositions = {75, 225, 375, 525};
+>>>>>>> 81dce0afb5a1e4223a3503c3f2b3cc19fd035278
         int x = spawnPositions[Greenfoot.getRandomNumber(4)]; 
         int y = 0;
         addObject(coin, x, y);
