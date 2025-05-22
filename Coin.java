@@ -14,6 +14,13 @@ public class Coin extends Actor
      */
     
     int speed = 1;
+    public Coin()
+    {
+        GreenfootImage image = new GreenfootImage("coin.png");
+        image.scale(50, 50);
+        setImage(image); 
+    }
+    
     public void act()
     {
         // Add your action code here.

@@ -13,11 +13,16 @@ public class Ball extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int speed = 1; 
-    public void act()
+    
+    public Ball()
     {
         GreenfootImage image = new GreenfootImage("ball.png");
         image.scale(50, 50);
         setImage(image); 
+    }
+    
+    public void act()
+    { 
         //Let the Ball fall.
         int x = getX();
         int y = getY() + speed;
