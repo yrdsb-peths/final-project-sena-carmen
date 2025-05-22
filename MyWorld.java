@@ -31,6 +31,7 @@ public class MyWorld extends World {
     
     public void createCoin() {
         Coin coin = new Coin();
+        coin.setSpeed(level);
         int[] spawnPositions = {75, 225, 375, 525};
         int x = spawnPositions[Greenfoot.getRandomNumber(4)]; 
         int y = 0;
