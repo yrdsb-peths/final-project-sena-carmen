@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Item to click on. 
  * 
- * @author Carmen Cheung 
- * @version May 20, 2025
+ * @ Sena Godek & Carmen Cheung 
+ * @ May 2025
  */
 public class Ball extends Actor
 {
@@ -34,6 +34,9 @@ public class Ball extends Actor
         {
             world.gameOver();
             world.removeObjects(world.getObjects(Ball.class));
+            world.removeObjects(world.getObjects(Ball2.class));
+            world.removeObjects(world.getObjects(Ball3.class));
+            world.removeObjects(world.getObjects(Ball4.class));
             world.removeObjects(world.getObjects(Coin.class));
         }
         
