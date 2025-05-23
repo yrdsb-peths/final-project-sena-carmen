@@ -12,23 +12,28 @@ public class Dog extends Actor
      * Act - do whatever the Dog wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    GreenfootImage image = new GreenfootImage("dog.png");
+
     GreenfootImage[] idle = new GreenfootImage[8];
     SimpleTimer animationTimer = new SimpleTimer();
     public Dog()
     {
-        GreenfootImage image = new GreenfootImage("dog.png");
-        image.scale(50, 50);
-        setImage(image);
         
-        for(int i = 0; i < idle.length; i++)
+        for(int i = 0; i < 8; i++)
         {
             idle[i] = new GreenfootImage("images/dog_idle/dog-idle" + i +".png"); 
             
         }
+        
+        animationTimer.mark(); 
         setImage(idle[0]);
     }
-    
+    public void act()
+    {
+        // Add your action code here.
+        animateDog(); 
+        
+    }    
     int imageIndex = 0; 
     public void animateDog()
     {
@@ -40,11 +45,5 @@ public class Dog extends Actor
             return;
         }
         animationTimer.mark();
-    }
-    public void act()
-    {
-        // Add your action code here.
-        animateDog(); 
-        
     }
 }

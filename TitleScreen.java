@@ -35,4 +35,12 @@ public class TitleScreen extends World
             Greenfoot.setWorld(gameWorld);
         }
     }
+    
+    private void prepare()
+    {
+        Dog dog = new Dog();
+        addObject(dog,487,330);
+        dog.setLocation(468,295);
+        dog.setLocation(77,323);
+    }
 }
