@@ -29,7 +29,7 @@ public class MyWorld extends World {
     
     }
     
-        public void createCoin() {
+    public void createCoin() {
         Coin coin = new Coin();
         coin.setSpeed(level);
         
@@ -40,6 +40,10 @@ public class MyWorld extends World {
         int y = 0;
         addObject(coin, x, y);
     
+    }
+    
+    public void createDog() {
+        Dog dog = new Dog(); 
     }
     
     public void gameOver()
@@ -79,6 +83,7 @@ public class MyWorld extends World {
         scoreLabel.setValue(score);
         createCoin();
     }
+    
 }
 
 
