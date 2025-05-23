@@ -10,7 +10,10 @@ public class MyWorld extends World {
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
         
-        createBall(); 
+        createBall();
+        createBall2();
+        createBall3();
+        createBall4();
         createCoin();
         
         setBackground(new GreenfootImage("background.png"));
@@ -20,12 +23,43 @@ public class MyWorld extends World {
         Ball ball = new Ball();
         ball.setSpeed(level);
         
-        //Define four possible X positions
-        int[] spawnPositions = {185, 255, 335, 395};;
-        
-        int x = spawnPositions[Greenfoot.getRandomNumber(4)]; 
+        //Define four possible X positions 
+        int x = 185; 
         int y = 0;
         addObject(ball, x, y);
+    
+    }
+      
+    public void createBall2() {
+        Ball2 ball2 = new Ball2();
+        ball2.setSpeed(level);
+        
+        //Define four possible X positions
+        int x = 255; 
+        int y = 0;
+        addObject(ball2, x, y);
+    
+    }
+    
+        public void createBall3() {
+        Ball3 ball3 = new Ball3();
+        ball3.setSpeed(level);
+        
+        //Define four possible X positions
+        int x = 335; 
+        int y = 0;
+        addObject(ball3, x, y);
+    
+    }
+    
+        public void createBall4() {
+        Ball4 ball4 = new Ball4();
+        ball4.setSpeed(level);
+        
+        //Define four possible X positions
+        int x = 395; 
+        int y = 0;
+        addObject(ball4, x, y);
     
     }
     
@@ -34,7 +68,7 @@ public class MyWorld extends World {
         coin.setSpeed(level);
         
         //Define four possible X positions
-        int[] spawnPositions = {185, 255, 335, 395};;
+        int[] spawnPositions = {185, 255, 335, 395};
         
         int x = spawnPositions[Greenfoot.getRandomNumber(4)]; 
         int y = 0;
