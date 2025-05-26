@@ -4,6 +4,10 @@ public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel; 
     int level = 1; 
+    int ballTimer1 = -1;
+    int ballTimer2 = -1;
+    int ballTimer3 = -1;
+    int ballTimer4 = -1;
     public MyWorld() {
         super(600, 400, 1, false);
         
@@ -143,6 +147,60 @@ public class MyWorld extends World {
         createCoin();
     }
     
+    public void startBall1Timer() 
+    {
+        ballTimer1 = 150;
+    }
+
+    public void startBall2Timer() 
+    {
+        ballTimer2 = 200;
+    }
+
+    public void startBall3Timer() 
+    {
+        ballTimer3 = 250;
+    }
+
+    public void startBall4Timer() 
+    {
+        ballTimer4 = 100;
+    }
+    
+    public void act() 
+    {
+        if (ballTimer1 > 0) 
+            ballTimer1--;
+        
+        else if (ballTimer1 == 0) 
+        {
+            createBall();
+            ballTimer1 = -1;
+        }
+
+        if (ballTimer2 > 0) 
+            ballTimer2--;
+        else if (ballTimer2 == 0) 
+        {
+            createBall2();
+            ballTimer2 = -1;
+        }
+
+        if (ballTimer3 > 0) 
+            ballTimer3--;
+        else if (ballTimer3 == 0) 
+        {
+            createBall3();
+            ballTimer3 = -1;
+        }
+
+        if (ballTimer4 > 0) 
+            ballTimer4--;
+        else if (ballTimer4 == 0) {
+            createBall4();
+            ballTimer4 = -1;
+        }   
+    }
 }
 
 

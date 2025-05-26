@@ -42,7 +42,7 @@ public class Ball4 extends Actor
         if(Greenfoot.mouseClicked(this))
         {
             getWorld().removeObject(this);
-            world.createBall4();
+            world.startBall4Timer();
             world.increaseScore();
         }
     }

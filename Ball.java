@@ -44,7 +44,7 @@ public class Ball extends Actor
         {
             getWorld().removeObject(this);
             world.increaseScore();
-            world.createBall();
+            world.startBall1Timer();
         }
     }
     
