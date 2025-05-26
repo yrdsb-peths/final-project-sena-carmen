@@ -16,7 +16,7 @@ public class Flower extends Actor
     public Flower()
     {
         GreenfootImage image = new GreenfootImage("flower.png");
-        image.scale(60, 60);
+        image.scale(70, 70);
         setImage(image); 
     }
     public void act()

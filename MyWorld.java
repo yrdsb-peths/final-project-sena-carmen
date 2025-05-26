@@ -16,10 +16,11 @@ public class MyWorld extends World {
         createBall4();
         createCoin();
         createDog();
-        createRock();
+        createRock(480);
         createFlower(500);
         createFlower(540); 
-        
+        createRock(50);
+        createGrass(100); 
         setBackground(new GreenfootImage("background.png"));
     }
     
@@ -83,13 +84,13 @@ public class MyWorld extends World {
     public void createDog() {
         Dog dog = new Dog(); 
         
-        addObject(dog, 80, 300);
+        addObject(dog, 80, 200);
     }
     
-    public void createRock() {
+    public void createRock(int x) {
         Rock rock = new Rock();
         
-        addObject(rock, 480, 380); 
+        addObject(rock, x, 380); 
     }
     
     public void createFlower(int x) {
@@ -97,6 +98,12 @@ public class MyWorld extends World {
     
         addObject(flower, x, 380); 
          
+    }
+    
+    public void createGrass(int x) {
+        Grass grass = new Grass();
+        
+        addObject(grass, x, 380); 
     }
     public void gameOver()
     {
