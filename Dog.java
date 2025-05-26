@@ -19,7 +19,7 @@ public class Dog extends Actor
     public Dog()
     {
         
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < idle.length; i++)
         {
             idle[i] = new GreenfootImage("images/dog_idle/dog-idle" + i +".png"); 
             
@@ -28,6 +28,7 @@ public class Dog extends Actor
         animationTimer.mark(); 
         setImage(idle[0]);
     }
+    
     public void act()
     {
         // Add your action code here.
@@ -36,14 +37,14 @@ public class Dog extends Actor
     }    
     int imageIndex = 0; 
     public void animateDog()
-    {
-        setImage(idle[imageIndex]);
-        imageIndex = (imageIndex + 1) % idle.length; 
-        
+    { 
         if(animationTimer.millisElapsed() < 100)
         {
             return;
         }
         animationTimer.mark();
+        
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
     }
 }

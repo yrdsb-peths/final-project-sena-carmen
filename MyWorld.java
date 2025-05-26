@@ -15,6 +15,7 @@ public class MyWorld extends World {
         createBall3();
         createBall4();
         createCoin();
+        createDog();
         
         setBackground(new GreenfootImage("background.png"));
     }
@@ -78,6 +79,8 @@ public class MyWorld extends World {
     
     public void createDog() {
         Dog dog = new Dog(); 
+        
+        addObject(dog, 185, 300);
     }
     
     public void gameOver()
