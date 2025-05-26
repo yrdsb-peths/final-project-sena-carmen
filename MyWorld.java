@@ -80,7 +80,7 @@ public class MyWorld extends World {
     public void createDog() {
         Dog dog = new Dog(); 
         
-        addObject(dog, 185, 300);
+        addObject(dog, 80, 300);
     }
     
     public void gameOver()

@@ -13,7 +13,6 @@ public class Dog extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage image = new GreenfootImage("dog.png");
-
     GreenfootImage[] idle = new GreenfootImage[8];
     SimpleTimer animationTimer = new SimpleTimer();
     public Dog()
@@ -22,7 +21,7 @@ public class Dog extends Actor
         for(int i = 0; i < idle.length; i++)
         {
             idle[i] = new GreenfootImage("images/dog_idle/dog-idle" + i +".png"); 
-            
+            idle[i].scale(100,100);
         }
         
         animationTimer.mark(); 
@@ -38,7 +37,7 @@ public class Dog extends Actor
     int imageIndex = 0; 
     public void animateDog()
     { 
-        if(animationTimer.millisElapsed() < 100)
+        if(animationTimer.millisElapsed() < 200)
         {
             return;
         }
