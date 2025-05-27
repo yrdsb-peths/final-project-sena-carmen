@@ -21,11 +21,7 @@ public class MyWorld extends World {
         createCoin();
         createDog();
         createCat();
-        createRock(480);
-        createFlower(500);
-        createFlower(540); 
-        createRock(50);
-        createGrass(100); 
+        createTube(); 
         setBackground(new GreenfootImage("background.png"));
     }
     
@@ -98,25 +94,11 @@ public class MyWorld extends World {
         addObject(cat, 500, 200); 
     }
     
-    public void createRock(int x) {
-        Rock rock = new Rock();
+    public void createTube() {
+        Tube tube = new Tube(); 
         
-        addObject(rock, x, 380); 
+        addObject(tube, 300, 500); 
     }
-    
-    public void createFlower(int x) {
-        Flower flower = new Flower(); 
-    
-        addObject(flower, x, 380); 
-         
-    }
-    
-    public void createGrass(int x) {
-        Grass grass = new Grass();
-        
-        addObject(grass, x, 380); 
-    }
-    
     public void gameOver()
     {
         Label gameOverLabel = new Label("Game Over", 100);
