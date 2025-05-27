@@ -2,6 +2,7 @@ import greenfoot.*;
 
 public class MyWorld extends World {
     public int score = 0;
+    public boolean gameIsOver = false;
     Label scoreLabel; 
     int level = 1; 
     int ballTimer1 = -1;
@@ -119,8 +120,22 @@ public class MyWorld extends World {
     
     public void gameOver()
     {
+        if (gameIsOver) 
+        {
+            return; 
+        }
+
+    
+        gameIsOver = true;
+
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+
+        removeObjects(getObjects(Ball.class));
+        removeObjects(getObjects(Ball2.class));
+        removeObjects(getObjects(Ball3.class));
+        removeObjects(getObjects(Ball4.class));
+        removeObjects(getObjects(Coin.class));
     }
     
     /**
@@ -177,6 +192,11 @@ public class MyWorld extends World {
     
     public void act() 
     {
+        if (gameIsOver) 
+        {
+            return;  
+        }
+        
         if (ballTimer1 > 0) 
         {
             ballTimer1--;
