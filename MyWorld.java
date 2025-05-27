@@ -15,10 +15,11 @@ public class MyWorld extends World {
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
         
-        createBall();
-        createBall2();
-        createBall3();
-        createBall4();
+        startBall1Timer();  
+        startBall2Timer();
+        startBall3Timer();
+        startBall4Timer();
+
         createCoin();
         createDog();
         createCat();
@@ -154,22 +155,22 @@ public class MyWorld extends World {
     
     public void startBall1Timer() 
     {
-        ballTimer1 = 150;
+        ballTimer1 = 60;
     }
 
     public void startBall2Timer() 
     {
-        ballTimer2 = 200;
+        ballTimer2 = 120;
     }
 
     public void startBall3Timer() 
     {
-        ballTimer3 = 250;
+        ballTimer3 = 180;
     }
 
     public void startBall4Timer() 
     {
-        ballTimer4 = 100;
+        ballTimer4 = 240;
     }
     
     public void act() 
