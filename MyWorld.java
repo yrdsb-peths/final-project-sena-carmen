@@ -20,6 +20,7 @@ public class MyWorld extends World {
         createBall4();
         createCoin();
         createDog();
+        createCat();
         createRock(480);
         createFlower(500);
         createFlower(540); 
@@ -89,6 +90,12 @@ public class MyWorld extends World {
         Dog dog = new Dog(); 
         
         addObject(dog, 80, 200);
+    }
+    
+    public void createCat() {
+        Cat cat = new Cat(); 
+        
+        addObject(cat, 500, 200); 
     }
     
     public void createRock(int x) {
