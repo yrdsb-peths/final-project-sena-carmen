@@ -52,5 +52,4 @@ public class Ball extends Actor
     {
         speed = spd; 
     }
-    
 }

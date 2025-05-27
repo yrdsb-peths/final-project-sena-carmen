@@ -109,6 +109,7 @@ public class MyWorld extends World {
         
         addObject(grass, x, 380); 
     }
+    
     public void gameOver()
     {
         Label gameOverLabel = new Label("Game Over", 100);
@@ -170,36 +171,40 @@ public class MyWorld extends World {
     public void act() 
     {
         if (ballTimer1 > 0) 
+        {
             ballTimer1--;
-        
-        else if (ballTimer1 == 0) 
+        }else if (ballTimer1 == 0)
         {
             createBall();
             ballTimer1 = -1;
-        }
-
+        }  
+        
         if (ballTimer2 > 0) 
+        {
             ballTimer2--;
-        else if (ballTimer2 == 0) 
+        }else if (ballTimer2 == 0)
         {
             createBall2();
             ballTimer2 = -1;
         }
-
+        
         if (ballTimer3 > 0) 
+        {
             ballTimer3--;
-        else if (ballTimer3 == 0) 
+        }else if (ballTimer3 == 0)
         {
             createBall3();
             ballTimer3 = -1;
         }
-
+        
         if (ballTimer4 > 0) 
+        {
             ballTimer4--;
-        else if (ballTimer4 == 0) {
+        }else if (ballTimer4 == 0)
+        {
             createBall4();
             ballTimer4 = -1;
-        }   
+        }
     }
 }
 
