@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Tube extends Actor
+public class Greentube extends Actor
 {
     /**
      * Act - do whatever the Tube wants to do. This method is called whenever
@@ -15,7 +15,7 @@ public class Tube extends Actor
     GreenfootImage image = new GreenfootImage("green-tube.png");
     GreenfootImage[] idle = new GreenfootImage[7];
     SimpleTimer animationTimer = new SimpleTimer();
-    public Tube()
+    public Greentube()
     {
         
         for(int i = 0; i < idle.length; i++)
