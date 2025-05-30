@@ -23,7 +23,8 @@ public class MyWorld extends World {
         createCoin();
         createDog();
         createCat();
-        createTube(); 
+        createGreentube();
+        createBluetube(); 
         setBackground(new GreenfootImage("background.png"));
     }
     
@@ -96,11 +97,18 @@ public class MyWorld extends World {
         addObject(cat, 500, 200); 
     }
     
-    public void createTube() {
-        Tube tube = new Tube(); 
+    public void createGreentube() {
+        Greentube greenTube = new Greentube(); 
         
-        addObject(tube, 510, 40); 
+        addObject(greenTube, 510, 40); 
     }
+    
+    public void createBluetube() {
+        Bluetube blueTube = new Bluetube();
+        
+        addObject(blueTube, 110, 40); 
+    }
+    
     public void gameOver()
     {
         if (gameIsOver) 
