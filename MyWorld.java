@@ -99,7 +99,7 @@ public class MyWorld extends World {
     public void createTube() {
         Tube tube = new Tube(); 
         
-        addObject(tube, 300, 500); 
+        addObject(tube, 510, 40); 
     }
     public void gameOver()
     {

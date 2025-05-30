@@ -21,7 +21,7 @@ public class Tube extends Actor
         for(int i = 0; i < idle.length; i++)
         {
             idle[i] = new GreenfootImage("images/green_tube/green-tube" + i +".png"); 
-            idle[i].scale(100,100);
+            idle[i].scale(100,120);
         }
         
         animationTimer.mark(); 
