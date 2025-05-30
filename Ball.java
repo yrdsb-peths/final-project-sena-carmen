@@ -34,6 +34,7 @@ public class Ball extends Actor
         {
             world.gameOver();
             gameOverSound.play();
+            world.gameMusic.stop();
         }
         
         if(Greenfoot.mouseClicked(this))
