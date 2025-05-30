@@ -12,7 +12,7 @@ public class Coin extends Actor
      * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    GreenfootSound coinCollectSound = new GreenfootSound("coin-collect-retro-8-bit-sound-effect-145251.mp3");
     int speed = 1;
     public Coin()
     {
@@ -44,6 +44,7 @@ public class Coin extends Actor
             getWorld().removeObject(this);
             world.createCoin();
             world.increaseScoreCoin();
+            coinCollectSound.play();
         }
     }
     

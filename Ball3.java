@@ -12,7 +12,7 @@ public class Ball3 extends Actor
      * Act - do whatever the Ball3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    GreenfootSound gameOverSound = new GreenfootSound("game-over-arcade.mp3");
     int speed = 1;
     public Ball3()
     {
@@ -33,6 +33,8 @@ public class Ball3 extends Actor
         if(getY() >= world.getHeight())
         {
             world.gameOver();
+            gameOverSound.play();
+            world.gameMusic.stop();
         }
         
         if(Greenfoot.mouseClicked(this))
