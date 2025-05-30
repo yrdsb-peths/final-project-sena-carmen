@@ -9,6 +9,8 @@ public class MyWorld extends World {
     int ballTimer2 = -1;
     int ballTimer3 = -1;
     int ballTimer4 = -1;
+    
+    GreenfootSound gameMusic = new GreenfootSound("gaming-music-8-bit-console-play-background-intro-theme-342069.mp3");
     public MyWorld() {
         super(600, 400, 1, false);
         
@@ -23,9 +25,9 @@ public class MyWorld extends World {
         createCoin();
         createDog();
         createCat();
-        createGreentube();
-        createBluetube(); 
+        createTube(); 
         setBackground(new GreenfootImage("background.png"));
+        gameMusic.playLoop();
     }
     
     public void createBall() {
@@ -97,16 +99,10 @@ public class MyWorld extends World {
         addObject(cat, 500, 200); 
     }
     
-    public void createGreentube() {
-        Greentube greenTube = new Greentube(); 
+    public void createTube() {
+        Tube tube = new Tube(); 
         
-        addObject(greenTube, 510, 40); 
-    }
-    
-    public void createBluetube() {
-        Bluetube blueTube = new Bluetube();
-        
-        addObject(blueTube, 110, 40); 
+        addObject(tube, 510, 40); 
     }
     
     public void gameOver()
