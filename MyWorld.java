@@ -14,8 +14,8 @@ public class MyWorld extends World {
     public MyWorld() {
         super(600, 400, 1, false);
         
-        scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 40, 40);
+        scoreLabel = new Label(0, 50);
+        addObject(scoreLabel, 570, 20);
         
         startBall1Timer();  
         startBall2Timer();
@@ -25,7 +25,8 @@ public class MyWorld extends World {
         createCoin();
         createDog();
         createCat();
-        createTube(); 
+        createGreentube();
+        createBluetube(); 
         setBackground(new GreenfootImage("background.png"));
         gameMusic.playLoop();
     }
@@ -99,10 +100,16 @@ public class MyWorld extends World {
         addObject(cat, 500, 200); 
     }
     
-    public void createTube() {
-        Tube tube = new Tube(); 
+    public void createGreentube() {
+        Greentube greenTube = new Greentube(); 
         
-        addObject(tube, 510, 40); 
+        addObject(greenTube, 500, 40); 
+    }
+    
+    public void createBluetube() {
+        Bluetube blueTube = new Bluetube(); 
+        
+        addObject(blueTube, 80, 40); 
     }
     
     public void gameOver()
