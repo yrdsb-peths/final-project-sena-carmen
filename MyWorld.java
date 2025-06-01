@@ -107,9 +107,14 @@ public class MyWorld extends World {
 
     
         gameIsOver = true;
-
-        Label gameOverLabel = new Label("Game Over", 100);
-        addObject(gameOverLabel, 300, 200);
+        
+        setBackground(new GreenfootImage("gameover.png"));
+        
+        addObject(scoreLabel, 300, 200);
+        scoreLabel.setLocation(300, 260); 
+        
+        removeObjects(getObjects(Greentube.class));
+        removeObjects(getObjects(Bluetube.class));
 
         removeObjects(getObjects(Ball.class));
         removeObjects(getObjects(Ball2.class));
