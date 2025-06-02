@@ -9,15 +9,16 @@ public class MyWorld extends World {
     int ballTimer2 = -1;
     int ballTimer3 = -1;
     int ballTimer4 = -1;
+    boolean hasTransitioned = false;
 
-    GreenfootSound gameMusic;
-    
-    
-    public MyWorld(int level) {
+    GreenfootSound gameMusic = new GreenfootSound("gaming-music-8-bit-console-play-background-intro-theme-342069.mp3");
+    public MyWorld(int level, int score) {
         super(600, 400, 1, false);
         this.level = level;
+        this.score = score;
+        hasTransitioned = false;
         
-        scoreLabel = new Label(0, 50);
+        scoreLabel = new Label(score, 50);
         addObject(scoreLabel, 570, 20);
 
         startBall1Timer();  
@@ -32,10 +33,19 @@ public class MyWorld extends World {
         if(level == 1) {
             // set background image and music
             setBackground(new GreenfootImage("background.png"));
-            gameMusic = new GreenfootSound("gaming-music-8-bit-console-play-background-intro-theme-342069.mp3");
+        } 
+        
+        if(level == 2)
+        {
+            setBackground(new GreenfootImage("background.png"));
+        } 
+        
+        if(level == 3)
+        {
+            setBackground(new GreenfootImage("titlebg.png"));
         }
+        
         gameMusic.playLoop();
-
     }
 
     public void createBall() {
@@ -136,22 +146,12 @@ public class MyWorld extends World {
     {
         score++;
         scoreLabel.setValue(score);
-
-        if (score % 15 == 0)
-        {
-            level += 1; 
-        }
     }
 
     public void increaseScoreCoin()
     {
         score+=2;
         scoreLabel.setValue(score);
-
-        if (score % 15 == 0)
-        {
-            level += 1; 
-        }
     }
 
     public void decreaseScore()
@@ -183,7 +183,6 @@ public class MyWorld extends World {
 
     public void act() 
     {
-
         if (gameIsOver) 
         {
             return;  
@@ -225,10 +224,11 @@ public class MyWorld extends World {
             ballTimer4 = -1;
         }
 
-        if(score >= 20) {
-            TransitionWorld world = new TransitionWorld(2);
-            Greenfoot.setWorld(world);
-        }
+        if (!hasTransitioned && score >= level * 20) {
+            hasTransitioned = true;  // Flag so it doesn’t repeat
+            Greenfoot.setWorld(new TransitionWorld(level + 1, score));
+            gameMusic.stop();
+        }      
     }
 }
 

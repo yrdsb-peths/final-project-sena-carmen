@@ -10,27 +10,28 @@ public class TransitionWorld extends World
 {
 
     SimpleTimer delayTimer = new SimpleTimer();
-    int level = 1;
-    
+    int level;
+    int score;
     /**
      * Constructor for objects of class TransitionWorld.
      * 
      */
-    public TransitionWorld(int level)
+    public TransitionWorld(int level, int score)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
         this.level = level;
+        this.score = score;
         Label label = new Label("Get Ready for level: " + level, 25);
         
-        addObject(label, 100, 100);
+        addObject(label, 300, 200);
         delayTimer.mark();
     }
     
     public void act() {
         if(delayTimer.millisElapsed() > 3000) {
-            Greenfoot.setWorld(new MyWorld(level));
+            Greenfoot.setWorld(new MyWorld(level, score));
         }
      }
 }
