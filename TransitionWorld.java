@@ -39,6 +39,11 @@ public class TransitionWorld extends World
         {
             setBackground(new GreenfootImage("transitionbg3.png"));
         }
+        
+        if(level ==4)
+        {
+            setBackground(new GreenfootImage("transitionbg4.png")); 
+        }
 
         createCountdown(); 
         transitionSound.play();
