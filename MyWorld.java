@@ -42,12 +42,12 @@ public class MyWorld extends World {
         
         if(level == 3)
         {
-            setBackground(new GreenfootImage("background.png"));
+            setBackground(new GreenfootImage("bg3.png"));
         }
         
         if(level == 4)
         {
-            setBackground(new GreenfootImage("background.png"));
+            setBackground(new GreenfootImage("bg4.png"));
         }
         
         gameMusic.playLoop();
