@@ -37,7 +37,7 @@ public class MyWorld extends World {
         
         if(level == 2)
         {
-            setBackground(new GreenfootImage("background.png"));
+            setBackground(new GreenfootImage("bg2.png"));
         } 
         
         if(level == 3)

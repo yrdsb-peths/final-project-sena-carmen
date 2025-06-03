@@ -53,6 +53,6 @@ public class TransitionWorld extends World
     public void createCountdown() {
         Countdown countdown = new Countdown(); 
         
-        addObject(countdown, 300, 200);
+        addObject(countdown, 300, 250);
     }
 }
