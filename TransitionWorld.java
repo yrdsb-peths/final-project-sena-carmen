@@ -12,6 +12,7 @@ public class TransitionWorld extends World
     SimpleTimer delayTimer = new SimpleTimer();
     int level;
     int score;
+    GreenfootSound transitionSound = new GreenfootSound("game-start-6104.mp3");
     /**
      * Constructor for objects of class TransitionWorld.
      * 
@@ -40,7 +41,7 @@ public class TransitionWorld extends World
         }
 
         createCountdown(); 
-        
+        transitionSound.play();
         delayTimer.mark();
     }
     
