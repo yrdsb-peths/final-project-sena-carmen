@@ -23,9 +23,24 @@ public class TransitionWorld extends World
         
         this.level = level;
         this.score = score;
-        Label label = new Label("Get Ready for level: " + level, 25);
         
-        addObject(label, 300, 200);
+        if(level == 1)
+        {
+            setBackground(new GreenfootImage("transitionbg1.png"));
+        }
+        
+        if(level == 2)
+        {
+            setBackground(new GreenfootImage("transitionbg2.png"));
+        }
+        
+        if(level == 3)
+        {
+            setBackground(new GreenfootImage("transitionbg3.png"));
+        }
+
+        createCountdown(); 
+        
         delayTimer.mark();
     }
     
@@ -34,4 +49,10 @@ public class TransitionWorld extends World
             Greenfoot.setWorld(new MyWorld(level, score));
         }
      }
+     
+    public void createCountdown() {
+        Countdown countdown = new Countdown(); 
+        
+        addObject(countdown, 300, 200);
+    }
 }
