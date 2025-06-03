@@ -25,6 +25,6 @@ public class YouWonWorld extends World
     public void createChest(){
         Chest chest = new Chest(); 
         
-        addObject(chest, 300, 250);
+        addObject(chest, 300, 280);
     }
 }

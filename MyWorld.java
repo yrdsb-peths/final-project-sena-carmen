@@ -21,7 +21,7 @@ public class MyWorld extends World {
         this.score = score;
         hasTransitioned = false;
         
-        scoreLabel = new Label(score, 50);
+        scoreLabel = new Label(score, 40);
         addObject(scoreLabel, 570, 20);
 
         startBall1Timer();  
@@ -104,7 +104,7 @@ public class MyWorld extends World {
 
     public void createCoin() {
         Coin coin = new Coin();
-        coin.setSpeed(level);
+        //coin.setSpeed(level);
 
         //Define four possible X positions
         int[] spawnPositions = {185, 255, 335, 395};
