@@ -11,7 +11,10 @@ public class MyWorld extends World {
     int ballTimer4 = -1;
     boolean hasTransitioned = false;
 
-    GreenfootSound gameMusic = new GreenfootSound("gaming-music-8-bit-console-play-background-intro-theme-342069.mp3");
+    GreenfootSound gameMusic1 = new GreenfootSound("gaming-music-8-bit-console-play-background-intro-theme-342069.mp3");
+    GreenfootSound gameMusic2 = new GreenfootSound("game-music-8-bit-console-play-background-intro-theme-350759.mp3");
+    GreenfootSound gameMusic3 = new GreenfootSound("game-music-player-console-8bit-background-intro-theme-297305.mp3");
+    GreenfootSound gameMusic4 = new GreenfootSound("gaming-music-8-bit-console-play-background-intro-theme-350760.mp3");
     public MyWorld(int level, int score) {
         super(600, 400, 1, false);
         this.level = level;
@@ -33,29 +36,31 @@ public class MyWorld extends World {
         if(level == 1) {
             // set background image and music
             setBackground(new GreenfootImage("background.png"));
+            gameMusic1.play();
         } 
         
         if(level == 2)
         {
             setBackground(new GreenfootImage("bg2.png"));
+            gameMusic2.play();
         } 
         
         if(level == 3)
         {
             setBackground(new GreenfootImage("bg3.png"));
+            gameMusic3.play();
         }
         
         if(level == 4)
         {
             setBackground(new GreenfootImage("bg4.png"));
+            gameMusic4.play();
         }
-        
-        gameMusic.playLoop();
     }
 
     public void createBall() {
         Ball ball = new Ball();
-        ball.setSpeed(level);
+        //ball.setSpeed(level);
 
         //Define four possible X positions 
         int x = 185; 
@@ -66,7 +71,7 @@ public class MyWorld extends World {
 
     public void createBall2() {
         Ball2 ball2 = new Ball2();
-        ball2.setSpeed(level);
+        //ball2.setSpeed(level);
 
         //Define four possible X positions
         int x = 255; 
@@ -77,7 +82,7 @@ public class MyWorld extends World {
 
     public void createBall3() {
         Ball3 ball3 = new Ball3();
-        ball3.setSpeed(level);
+        //ball3.setSpeed(level);
 
         //Define four possible X positions
         int x = 335; 
@@ -88,7 +93,7 @@ public class MyWorld extends World {
 
     public void createBall4() {
         Ball4 ball4 = new Ball4();
-        ball4.setSpeed(level);
+        //ball4.setSpeed(level);
 
         //Define four possible X positions
         int x = 395; 
@@ -121,14 +126,22 @@ public class MyWorld extends World {
 
         addObject(blueTube, 80, 40); 
     }
-
+    public void stopAllMusic() 
+    {
+        gameMusic1.stop();
+        gameMusic2.stop();
+        gameMusic3.stop();
+        gameMusic4.stop();
+    }   
     public void gameOver()
     {
         if (gameIsOver) 
         {
             return; 
         }
-
+        
+        stopAllMusic();
+        
         gameIsOver = true;
         setBackground(new GreenfootImage("gameover.png"));
         addObject(scoreLabel, 300, 200);
@@ -142,6 +155,7 @@ public class MyWorld extends World {
         removeObjects(getObjects(Ball3.class));
         removeObjects(getObjects(Ball4.class));
         removeObjects(getObjects(Coin.class));
+        
     }
 
     /**
@@ -231,14 +245,14 @@ public class MyWorld extends World {
 
         if (!hasTransitioned && score >= level * 30 && score < 120) {
             hasTransitioned = true;  // Flag so it doesn’t repeat
+            stopAllMusic(); 
             Greenfoot.setWorld(new TransitionWorld(level + 1, score));
-            gameMusic.stop();
         }
         
         if(score >= 120)
         {
             gameIsOver = true;      
-            gameMusic.stop();          
+            stopAllMusic();          
             Greenfoot.setWorld(new YouWonWorld(score));
         }
     }
