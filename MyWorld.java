@@ -229,13 +229,13 @@ public class MyWorld extends World {
             ballTimer4 = -1;
         }
 
-        if (!hasTransitioned && score >= level * 20 && score < 80) {
+        if (!hasTransitioned && score >= level * 30 && score < 120) {
             hasTransitioned = true;  // Flag so it doesn’t repeat
             Greenfoot.setWorld(new TransitionWorld(level + 1, score));
             gameMusic.stop();
         }
         
-        if(score >= 80)
+        if(score >= 120)
         {
             gameIsOver = true;      
             gameMusic.stop();          
