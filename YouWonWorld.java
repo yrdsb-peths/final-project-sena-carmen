@@ -19,5 +19,12 @@ public class YouWonWorld extends World
         super(600, 400, 1);
         setBackground(new GreenfootImage("gamewin.png"));
         winMusic.play();
+        createChest(); 
+    }
+    
+    public void createChest(){
+        Chest chest = new Chest(); 
+        
+        addObject(chest, 300, 250);
     }
 }
