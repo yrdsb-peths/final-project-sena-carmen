@@ -45,6 +45,11 @@ public class MyWorld extends World {
             setBackground(new GreenfootImage("background.png"));
         }
         
+        if(level == 4)
+        {
+            setBackground(new GreenfootImage("background.png"));
+        }
+        
         gameMusic.playLoop();
     }
 
@@ -224,11 +229,18 @@ public class MyWorld extends World {
             ballTimer4 = -1;
         }
 
-        if (!hasTransitioned && score >= level * 20) {
+        if (!hasTransitioned && score >= level * 30 && score < 120) {
             hasTransitioned = true;  // Flag so it doesn’t repeat
             Greenfoot.setWorld(new TransitionWorld(level + 1, score));
             gameMusic.stop();
-        }      
+        }
+        
+        if(score >= 120)
+        {
+            gameIsOver = true;      
+            gameMusic.stop();          
+            Greenfoot.setWorld(new YouWonWorld(score));
+        }
     }
 }
 

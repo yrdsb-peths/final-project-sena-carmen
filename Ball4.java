@@ -45,7 +45,7 @@ public class Ball4 extends Actor
         }
     }
     
-        public void setSpeed (int spd)
+    public void setSpeed (int spd)
     {
         speed = spd; 
     }
