@@ -30,5 +30,17 @@ public class TitleScreen extends World
             TransitionWorld world = new TransitionWorld(1, 0);
             Greenfoot.setWorld(world);
         }
+        
+        if(Greenfoot.isKeyDown("i"))
+        {
+            InstructionWorld world = new InstructionWorld();
+            Greenfoot.setWorld(world);
+        }
+        
+        if(Greenfoot.isKeyDown("v"))
+        {
+            ShowLevelWorld world = new ShowLevelWorld();
+            Greenfoot.setWorld(world);
+        }
     }
 }

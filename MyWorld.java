@@ -4,6 +4,7 @@ public class MyWorld extends World {
     public int score = 0;
     public boolean gameIsOver = false;
     Label scoreLabel; 
+    Label levelLabel; 
     int level = 1; 
     int ballTimer1 = -1;
     int ballTimer2 = -1;
@@ -144,8 +145,9 @@ public class MyWorld extends World {
         
         gameIsOver = true;
         setBackground(new GreenfootImage("gameover.png"));
-        addObject(scoreLabel, 300, 200);
-        scoreLabel.setLocation(300, 260); 
+        levelLabel = new Label(level, 40);
+        addObject(levelLabel, 300, 200);
+        levelLabel.setLocation(300, 260); 
 
         removeObjects(getObjects(Greentube.class));
         removeObjects(getObjects(Bluetube.class));
