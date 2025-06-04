@@ -60,7 +60,7 @@ public class MyWorld extends World {
 
     public void createBall() {
         Ball ball = new Ball();
-        //ball.setSpeed(level);
+        ball.setSpeed(level);
 
         //Define four possible X positions 
         int x = 185; 
@@ -71,7 +71,7 @@ public class MyWorld extends World {
 
     public void createBall2() {
         Ball2 ball2 = new Ball2();
-        //ball2.setSpeed(level);
+        ball2.setSpeed(level);
 
         //Define four possible X positions
         int x = 255; 
@@ -82,7 +82,7 @@ public class MyWorld extends World {
 
     public void createBall3() {
         Ball3 ball3 = new Ball3();
-        //ball3.setSpeed(level);
+        ball3.setSpeed(level);
 
         //Define four possible X positions
         int x = 335; 
@@ -93,7 +93,7 @@ public class MyWorld extends World {
 
     public void createBall4() {
         Ball4 ball4 = new Ball4();
-        //ball4.setSpeed(level);
+        ball4.setSpeed(level);
 
         //Define four possible X positions
         int x = 395; 
@@ -104,7 +104,7 @@ public class MyWorld extends World {
 
     public void createCoin() {
         Coin coin = new Coin();
-        //coin.setSpeed(level);
+        coin.setSpeed(level);
 
         //Define four possible X positions
         int[] spawnPositions = {185, 255, 335, 395};
@@ -243,13 +243,13 @@ public class MyWorld extends World {
             ballTimer4 = -1;
         }
 
-        if (!hasTransitioned && score >= level * 30 && score < 120) {
+        if (!hasTransitioned && score >= level * 40 && score < 160) {
             hasTransitioned = true;  // Flag so it doesn’t repeat
             stopAllMusic(); 
             Greenfoot.setWorld(new TransitionWorld(level + 1, score));
         }
         
-        if(score >= 120)
+        if(score >= 160)
         {
             gameIsOver = true;      
             stopAllMusic();          
