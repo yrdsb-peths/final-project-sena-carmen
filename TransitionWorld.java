@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class TransitionWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @authors Sena Godek & Carmen Cheung 
+ * @June 2025
  */
 public class TransitionWorld extends World
 {
@@ -15,6 +15,9 @@ public class TransitionWorld extends World
     GreenfootSound transitionSound = new GreenfootSound("game-start-6104.mp3");
     /**
      * Constructor for objects of class TransitionWorld.
+     * 
+     * @param level the level user reaches every 40 scores
+     * @param score the score user gain when clicks a ball or coin
      * 
      */
     public TransitionWorld(int level, int score)
@@ -50,12 +53,18 @@ public class TransitionWorld extends World
         delayTimer.mark();
     }
     
+    /**
+     * This set the how long the transition screen appear for.
+     */
     public void act() {
         if(delayTimer.millisElapsed() > 3000) {
             Greenfoot.setWorld(new MyWorld(level, score));
         }
      }
      
+    /**
+     * This create the countdown animation from the Countdown.class.
+     */
     public void createCountdown() {
         Countdown countdown = new Countdown(); 
         

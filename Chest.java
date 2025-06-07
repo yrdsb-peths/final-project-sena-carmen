@@ -1,20 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Chest here.
+ * Chest class animates the chest animation at YouWonWorld. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Carmen Cheung
+ * @June 2025
  */
 public class Chest extends Actor
 {
-    /**
-     * Act - do whatever the Chest wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootImage[] idle = new GreenfootImage[4];
     SimpleTimer animationTimer = new SimpleTimer();
     
+    /**
+     * This create the chest. 
+     */
     public Chest()
     {
         
@@ -28,13 +27,19 @@ public class Chest extends Actor
         setImage(idle[0]);
     }
     
+    /**
+     * COnstructor for animateChest().
+     */
     public void act()
     {
-        // Add your action code here.
-        animateCountdown(); 
+        animateChest(); 
     }    
+    
+    /**
+     * This animate the chest.
+     */
     int imageIndex = 0; 
-    public void animateCountdown()
+    public void animateChest()
     { 
         if(animationTimer.millisElapsed() < 300)
         {

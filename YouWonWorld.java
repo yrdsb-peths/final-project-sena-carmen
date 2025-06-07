@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class YouWonWorld here.
+ * YouWonWorld class construct a world when user complete all level. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @authors Sena Godek & Carmen Cheung 
+ * @June 2025
  */
 public class YouWonWorld extends World
 {
@@ -22,6 +22,9 @@ public class YouWonWorld extends World
         createChest(); 
     }
     
+    /**
+     * This create the treasure chest from the Chest.class.
+     */
     public void createChest(){
         Chest chest = new Chest(); 
         

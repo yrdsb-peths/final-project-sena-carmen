@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ball2 here.
+ * Ball2 class construct the blue ball at MyWorld.
  * 
  * @ Sena Godek & Carmen Cheung 
  * @ May 2025
  */
 public class Ball2 extends Actor
 {
-    /**
-     * Act - do whatever the Ball2 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootSound gameOverSound = new GreenfootSound("game-over-arcade.mp3");
     int speed = 1;
+    
+    /**
+     * This create the ball2. 
+     */
     public Ball2()
     {
         GreenfootImage image = new GreenfootImage("ball2.png");
@@ -21,6 +21,9 @@ public class Ball2 extends Actor
         setImage(image); 
     }
     
+    /**
+     * This set the ball to fall. 
+     */
     public void act()
     {
         //Let the Ball fall.
@@ -44,6 +47,9 @@ public class Ball2 extends Actor
         }
     }
     
+    /**
+     * This set the speed of the ball. 
+     */
     public void setSpeed (int spd)
     {
        speed = spd; 

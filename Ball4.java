@@ -1,19 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ball4 here.
+ * Ball4 class construct the red ball at MyWorld. 
  * 
  * @ Sena Godek & Carmen Cheung 
  * @ May 2025
  */
 public class Ball4 extends Actor
 {
-    /**
-     * Act - do whatever the Ball4 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootSound gameOverSound = new GreenfootSound("game-over-arcade.mp3");
     int speed = 1;
+    /**
+     * This create the ball4. 
+     */
     public Ball4()
     {
         GreenfootImage image = new GreenfootImage("ball4.png");
@@ -21,6 +20,9 @@ public class Ball4 extends Actor
         setImage(image); 
     }
     
+    /**
+     * This set the ball to fall. 
+     */
     public void act()
     {
         //Let the Ball fall.
@@ -44,6 +46,9 @@ public class Ball4 extends Actor
         }
     }
     
+    /**
+     * This set the speed of the ball.
+     */
     public void setSpeed (int spd)
     {
         speed = spd; 

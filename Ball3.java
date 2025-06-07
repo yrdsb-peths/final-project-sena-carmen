@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ball3 here.
+ * Ball3 class construct the purple ball at MyWorld.
  * 
  * @ Sena Godek & Carmen Cheung 
  * @ May 2025
  */
 public class Ball3 extends Actor
 {
-    /**
-     * Act - do whatever the Ball3 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootSound gameOverSound = new GreenfootSound("game-over-arcade.mp3");
     int speed = 1;
+    
+    /**
+     * This create the ball3. 
+     */
     public Ball3()
     {
         GreenfootImage image = new GreenfootImage("ball3.png");
@@ -21,6 +21,9 @@ public class Ball3 extends Actor
         setImage(image); 
     }
     
+    /**
+     * This set the ball to fall. 
+     */
     public void act()
     {
         //Let the Ball fall.
@@ -44,6 +47,9 @@ public class Ball3 extends Actor
         }
     }
     
+    /**
+     * This set the speed of the ball. 
+     */
     public void setSpeed (int spd)
     {
         speed = spd; 

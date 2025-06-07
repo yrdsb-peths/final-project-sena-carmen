@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Item to click on. 
+ * Ball class construct the green ball at MyWorld.  
  * 
  * @ Sena Godek & Carmen Cheung 
  * @ May 2025
  */
 public class Ball extends Actor
 {
-    /**
-     * Act - do whatever the Ball wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootSound gameOverSound = new GreenfootSound("game-over-arcade.mp3");
     int speed = 1; 
+    
+    /**
+     * This create the ball. 
+     */
     public Ball()
     {
         GreenfootImage image = new GreenfootImage("ball1.png");
@@ -21,6 +21,9 @@ public class Ball extends Actor
         setImage(image); 
     }
     
+    /**
+     * This set the ball to fall. 
+     */
     public void act()
     { 
         //Let the Ball fall.
@@ -44,6 +47,9 @@ public class Ball extends Actor
         }
     }
     
+    /**
+     * This set the speed of the ball. 
+     */
     public void setSpeed (int spd)
     {
         speed = spd; 

@@ -1,20 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bluetube here.
+ * Bluetube class create the animation of the blue tube in MyWorld. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Carmen Cheung  
+ * @June 2025
  */
 public class Bluetube extends Actor
 {
-    /**
-     * Act - do whatever the Bluetube wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     GreenfootImage image = new GreenfootImage("blue-tube.png");
     GreenfootImage[] idle = new GreenfootImage[7];
     SimpleTimer animationTimer = new SimpleTimer();
+    
+    /** 
+     * This create the blue tube. 
+     */
     public Bluetube()
     {
         
@@ -28,12 +29,18 @@ public class Bluetube extends Actor
         setImage(idle[0]);
     }
     
+    /**
+     * Constructor for animateTube(). 
+     */
     public void act()
     {
-        // Add your action code here.
         animateTube(); 
         
     }    
+    
+    /**
+     * This animate the blue tube. 
+     */
     int imageIndex = 0; 
     public void animateTube()
     { 

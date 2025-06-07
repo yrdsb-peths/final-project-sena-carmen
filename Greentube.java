@@ -1,20 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Tube here.
+ * Greentube class animates the green tube at MyWorld. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Carmen Cheung
+ * @June 2025
  */
 public class Greentube extends Actor
 {
-    /**
-     * Act - do whatever the Tube wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootImage image = new GreenfootImage("green-tube.png");
     GreenfootImage[] idle = new GreenfootImage[7];
     SimpleTimer animationTimer = new SimpleTimer();
+    
+    /**
+     * This animate the green tube. 
+     */
     public Greentube()
     {
         
@@ -28,12 +28,17 @@ public class Greentube extends Actor
         setImage(idle[0]);
     }
     
+    /**
+     * Constructor for animateTube().
+     */
     public void act()
     {
-        // Add your action code here.
         animateTube(); 
-        
     }    
+    
+    /**
+     * This set the speed of the green tube. 
+     */
     int imageIndex = 0; 
     public void animateTube()
     { 

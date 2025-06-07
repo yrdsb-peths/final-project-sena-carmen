@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Countdown here.
+ * Countdown class animates the countdown at TransitionWorld.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Carmen Cheung 
+ * @June 2025
  */
 public class Countdown extends Actor
 {
@@ -15,6 +15,9 @@ public class Countdown extends Actor
     GreenfootImage[] idle = new GreenfootImage[4];
     SimpleTimer animationTimer = new SimpleTimer();
     
+    /**
+     * This animate the countdown.
+     */
     public Countdown()
     {
         
@@ -31,11 +34,17 @@ public class Countdown extends Actor
         setImage(idle[0]);
     }
     
+    /**
+     * Constructor for animateCountdown.
+     */
     public void act()
     {
-        // Add your action code here.
         animateCountdown(); 
     }    
+    
+    /**
+     * This set the speed of the countdown.
+     */
     int imageIndex = 0; 
     public void animateCountdown()
     { 

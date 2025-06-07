@@ -1,9 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Coin here.
+ * Coin class construct the coin dropping down at MyWorld. User click the coin to gain two
+ * scores. When coin reaches bottom of screen, scores decreases by two. 
  * 
- * @ Sena Godek
+ * @author Sena Godek
  * @ May 2025
  */
 public class Coin extends Actor
@@ -14,6 +15,10 @@ public class Coin extends Actor
      */
     GreenfootSound coinCollectSound = new GreenfootSound("coin-collect-retro-8-bit-sound-effect-145251.mp3");
     int speed = 1;
+    
+    /**
+     * This create the coin.
+     */
     public Coin()
     {
         GreenfootImage image = new GreenfootImage("coin.png");
@@ -21,9 +26,11 @@ public class Coin extends Actor
         setImage(image); 
     }
     
+    /**
+     * The allow the coin to drop down. 
+     */
     public void act()
     {
-        // Add your action code here.
         GreenfootImage image = new GreenfootImage("coin.png");
         image.scale(50, 50);
         setImage(image);
@@ -48,6 +55,9 @@ public class Coin extends Actor
         }
     }
     
+    /**
+     * The set the coin's speed. 
+     */
     public void setSpeed(int spd)
     {
         speed = spd;

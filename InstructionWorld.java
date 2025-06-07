@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class InstructionWorld here.
+ * InstructionWorld class construct a world that show user the instructions.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Carmen Cheung 
+ * @June 2025
  */
 public class InstructionWorld extends World
 {
 
     /**
      * Constructor for objects of class InstructionWorld.
-     * 
+     *  
      */
     public InstructionWorld()
     {    
@@ -20,6 +20,10 @@ public class InstructionWorld extends World
         setBackground(new GreenfootImage("howtoplaypage.png"));
     }
     
+    /**
+     * This navigate to TitleScreen as the "h" key is pressed. 
+     * 
+     */
     public void act()
     {
         if(Greenfoot.isKeyDown("h"))

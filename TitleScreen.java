@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Title Screen
+ * TitleScreen class construct a world at beginning of the game. 
  * 
  * @author Carmen Cheung 
- * @version May 12, 2025
+ * @ May 2025
  */
 public class TitleScreen extends World
 {
@@ -21,7 +21,7 @@ public class TitleScreen extends World
     }
 
     /**
-     * The main world act loop
+     * This navigates to different screens as different keys are pressed.
      */
     public void act()
     {
