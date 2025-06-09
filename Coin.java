@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Coin class construct the coin dropping down at MyWorld. User click the coin to gain two
  * scores. When coin reaches bottom of screen, scores decreases by two. 
  * 
- * @author Sena Godek
+ * @author Sena Godek and Carmen Cheung 
  * @ May 2025
  */
 public class Coin extends Actor

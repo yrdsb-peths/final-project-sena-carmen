@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Ball class construct the green ball at MyWorld.  
  * 
- * @ Sena Godek & Carmen Cheung 
+ * @ author Sena Godek & Carmen Cheung 
  * @ May 2025
  */
 public class Ball extends Actor

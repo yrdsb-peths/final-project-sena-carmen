@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * TitleScreen class construct a world at beginning of the game. 
  * 
- * @author Carmen Cheung 
+ * @author Carmen Cheung and Sena Godek 
  * @ May 2025
  */
 public class TitleScreen extends World

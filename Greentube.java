@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Greentube class animates the green tube at MyWorld. 
  * 
- * @author Carmen Cheung
+ * @author Carmen Cheung and Sena godek
  * @June 2025
  */
 public class Greentube extends Actor

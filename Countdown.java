@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Countdown class animates the countdown at TransitionWorld.
  * 
- * @author Carmen Cheung 
+ * @author Carmen Cheung and Sena Godek
  * @June 2025
  */
 public class Countdown extends Actor

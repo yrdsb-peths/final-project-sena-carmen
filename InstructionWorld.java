@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * InstructionWorld class construct a world that show user the instructions.
  * 
- * @author Carmen Cheung 
+ * @author Carmen Cheung and Sena Godek
  * @June 2025
  */
 public class InstructionWorld extends World

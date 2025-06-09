@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * ShowLevelWorld class construct the world that show user the amount of levels in this game. 
  * 
- * @author Carmen Cheung 
+ * @author Carmen Cheung and Sena Godek
  * @June 2025
  */
 public class ShowLevelWorld extends World

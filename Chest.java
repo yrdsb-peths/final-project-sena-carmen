@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Chest class animates the chest animation at YouWonWorld. 
  * 
- * @author Carmen Cheung
+ * @author Carmen Cheung and Sena Godek
  * @June 2025
  */
 public class Chest extends Actor

@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Bluetube class create the animation of the blue tube in MyWorld. 
  * 
- * @author Carmen Cheung  
+ * @author Carmen Cheung and Sena Godek 
  * @June 2025
  */
 public class Bluetube extends Actor
